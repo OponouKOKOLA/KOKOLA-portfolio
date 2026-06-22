@@ -21,15 +21,13 @@
             <a href="#Parcours">Parcours académique</a>
             <a href="#projets">Mes projets</a>
             <a href="#contact">Me Contacter </a>
-            <a href="CV_KOKOLA_Emmanuel (1).pdf"> Telecharger mon CV</a>
+            <a href="CV_KOKOLA_Emmanuel .pdf"> Telecharger mon CV</a>
         </nav>
     </header>
 
     <!-- Section Accueil -->
     <section class="home" id="home">
-        <div class="home-img">
-            <img src="img_home.jpg" alt="Mon Image">
-        </div>
+        
         <div class="home-content">
             <h1>KOKOLA Oponou Emmanuel</h1>
             <p>Bienvenue sur mon portfolio, Je suis étudiant en Master 1 d'électronique à l'Université de Rennes 1</p>
@@ -54,7 +52,7 @@
                 <span><i class='bx bx-phone'></i> +33 783 605 857</span>
                 <span><i class='bx bx-envelope'></i> manuelkokola@gmail.com</span>
             </div>
-            <a href="CV_KOKOLA_Emmanuel (1).pdf" class="btn" target="_blank">Voir mon CV</a>
+            <a href="CV_KOKOLA_Emmanuel .pdf" class="btn" target="_blank">Voir mon CV</a>
         </div>
     </section>
 
@@ -132,31 +130,41 @@
         <h2 class="heading"><span>Mes projets</span></h2>
 
         <div class="services-container">
-
+            
             <!-- Projet 1 : Station IoT -->
             <div class="service-box">
                 <i class='bx bx-wifi'></i>
                 <span class="project-tag">IoT / Embarqué</span>
                 <h3>Station météo connectée</h3>
                 <p>
-                    Acquisition de température et d'humidité via un capteur DHT11 piloté par un ESP32. Les données sont envoyées en temps réel via MQTT, stockées dans une base MySQL et visualisées sur un dashboard web (JSON/REST API).
+                    Acquisition de température et d'humidité via un capteur DHT11 piloté par un ESP32-S3. 
+                    Les données sont envoyées en temps réel via HTTP vers un serveur PHP hébergé sur InfinityFree, 
+                     stockées dans une base MySQL et consultables depuis n'importe quel appareil via une page web.
                 </p>
                 <div class="tech-stack">
-                    <span>ESP32</span><span>DHT11</span><span>MQTT</span><span>MySQL</span><span>JSON</span>
+                    <span>ESP32-S3</span>
+                    <span>DHT11</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>HTTP</span>
+                    <span>WiFi</span>
                 </div>
                 <a href="https://github.com/OponouKOKOLA" class="btn" target="_blank">Voir sur GitHub</a>
             </div>
 
-            <!-- Projet 2 : Réseau capteurs CAN Bus -->
+          <!-- Projet 2 : Système temps réel FreeRTOS -->
             <div class="service-box">
-                <i class='bx bx-network-chart'></i>
+                <i class='bx bx-chip'></i>
                 <span class="project-tag en-cours">Embarqué - En cours</span>
-                <h3>Réseau de capteurs CAN Bus</h3>
+                <h3>Système temps réel multi-tâches</h3>
                 <p>
-                    Architecture multi-cartes STM32 communicant via CAN Bus (500 kbps), standard utilisé dans l'industrie automobile. Un nœud esclave capture température et humidité, un nœud maître reçoit, affiche sur LCD et sauvegarde sur SD Card avec gestion des erreurs (retry/timeout).
+                    Mise en place de FreeRTOS sur STM32 avec gestion de tâches concurrentes. 
+                    Tâche 1 : acquisition capteur DHT11 toutes les 500 ms via I²C. 
+                    Tâche 2 : transmission des données sur UART en temps réel. 
+                    Synchronisation via sémaphores, files de messages (queue) et mutex.
                 </p>
                 <div class="tech-stack">
-                    <span>STM32</span><span>CAN Bus</span><span>I²C</span><span>LCD</span><span>SD Card</span>
+                    <span>STM32</span><span>FreeRTOS</span><span>I²C</span><span>UART</span><span>DHT11</span>
                 </div>
                 <a href="https://github.com/OponouKOKOLA" class="btn" target="_blank">Voir sur GitHub</a>
             </div>
@@ -212,7 +220,7 @@
         <a href="mailto:manuelkokola@gmail.com" aria-label="Email">
             <i class='bx bx-envelope'></i>
         </a>
-        <a href="CV_KOKOLA_Emmanuel (1).pdf" aria-label="Mon CV">
+        <a href="CV_KOKOLA_Emmanuel .pdf" aria-label="Mon CV">
            <i class="bx bx-file"></i>
         </a>
         
